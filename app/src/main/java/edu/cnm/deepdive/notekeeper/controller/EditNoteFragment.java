@@ -28,14 +28,14 @@ public class EditNoteFragment extends BottomSheetDialogFragment {
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
-    binding = FragmentEditNoteBinding.inflate(inflater, container, false)
+    binding = FragmentEditNoteBinding.inflate(inflater, container, false);
     return binding.getRoot();
   }
 
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    viewModel = new ViewModelProvider(this).get(NoteViewModel.class)
+    viewModel = new ViewModelProvider(this).get(NoteViewModel.class);
   }
 
   @Override
