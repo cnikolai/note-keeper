@@ -64,6 +64,17 @@ public class NoteViewModel
     );
   }
 
+  public void delete(Note note) {
+    pending.add(
+        repository
+            .delete(note)
+            .subscribe(
+                () -> {},
+                this::postThrowable
+            )//first one is completable - action that does nothing, consume of a throwable
+    );
+  }
+
   private void postThrowable(Throwable throwable) {
     Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable);
     this.throwable.postValue(throwable);
