@@ -32,25 +32,33 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <ImageButton
       android:id="@+id/save"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:padding="@dimen/half_dynamic_spacing"
+      android:src="@drawable/ic_check_black_24dp"
+      app:tint="@color/submit"
+      android:background="?android:selectableItemBackground"
       app:layout_constraintTop_toTopOf="@id/subject_layout"
       app:layout_constraintEnd_toStartOf="@id/cancel"
       app:layout_constraintBottom_toBottomOf="@id/subject_layout"
-      android:text="@string/save_label"/>
+      android:text="@string/save_label"
+      android:contentDescription="@string/save_label"/>
 
-    <Button
+    <ImageButton
       android:id="@+id/cancel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_margin="@dimen/half_dynamic_spacing"
+      android:padding="@dimen/half_dynamic_spacing"
+      android:src="@drawable/ic_close_black_24dp"
+      app:tint="@color/cancel"
+      android:background="?android:selectableItemBackground"
       app:layout_constraintTop_toTopOf="@id/subject_layout"
       app:layout_constraintBottom_toBottomOf="@id/subject_layout"
       app:layout_constraintEnd_toEndOf="parent"
-      android:text="@string/cancel_label"/>
+      android:text="@string/cancel_label"
+      android:contentDescription="@string/cancel_label"/>
 
 
     <com.google.android.material.textfield.TextInputLayout
