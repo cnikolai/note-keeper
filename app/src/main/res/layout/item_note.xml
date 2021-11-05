@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:padding="@dimen/half_dynamic_spacing"
+  android:background="?android:selectableItemBackground">
+
+  <TextView
+    android:id="@+id/subject"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/updated"
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    tools:text="This is a subject"/>
+
+  <TextView
+    android:id="@+id/updated"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintBaseline_toBaselineOf="@id/subject"
+    app:layout_constraintStart_toEndOf="@id/subject"
+    app:layout_constraintEnd_toEndOf="parent"
+    style="@style/TextAppearance.AppCompat.Body1"
+    tools:text="11/05/2021"/>
+
+  <TextView
+    android:id="@+id/text"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_static_spacing"
+    app:layout_constraintTop_toBottomOf="@id/subject"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    style="@style/TextAppearance.AppCompat.Body1"
+    android:maxLines="3"
+    android:ellipsize="end"
+    tools:text="Lorem ipsum \n dolor sit amet, consectetur adipiscing elit. Nam tellus neque, tincidunt at massa sed, congue lacinia metus. Nam quis libero urna. Cras sodales mauris sed ipsum posuere egestas at quis diam. Donec porttitor fringilla erat non porta. Aenean feugiat nulla et justo tempus efficitur."/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
